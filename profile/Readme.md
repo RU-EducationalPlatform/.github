@@ -17,7 +17,7 @@
 
 <br>
 
-*Hands-on, in-browser learning objects for computer science & electrical engineering and much more 
+Hands-on, in-browser learning objects for computer science & electrical engineering, and much more 
 >*Lead Engineers **Satrajit Ghosh** & **Prof. Dov Kruger**.*
 
 </div>
