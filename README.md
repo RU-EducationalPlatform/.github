@@ -1,439 +1,172 @@
 <div align="center">
 
-<!-- ─────────────────────────────  HERO  ───────────────────────────── -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/prosaidon-logo-dark.svg">
+  <img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/prosaidon-logo.svg" alt="prosAIdon" width="420">
+</picture>
 
-<sub>RUTGERS UNIVERSITY · RU-EDUCATIONAL​PLATFORM</sub>
+<br><br>
 
-# K N O W S Y
-
-### *An interactive textbook, built at the speed of AI.*
-
-<br>
-
-![Org](https://img.shields.io/badge/org-RU--EducationalPlatform-C8102E?style=for-the-badge&labelColor=0E1330)
-![Made at](https://img.shields.io/badge/made_at-Rutgers-C8102E?style=for-the-badge&labelColor=0E1330)
-![Lead developers](https://img.shields.io/badge/lead_devs-Ghosh_%26_Kruger-0E1330?style=for-the-badge&labelColor=C8102E)
-![Aesthetic](https://img.shields.io/badge/design-Editorial_Academia-0E1330?style=for-the-badge&labelColor=F2EDE2)
+**One document platform that writes, computes, tests and grades.**
 
 <br>
 
-*Hands-on, in-browser learning objects for computer science & electrical engineering and much more 
->*Lead Engineers **Satrajit Ghosh** & **Prof. Dov Kruger**.*
+![IDoc](https://img.shields.io/badge/IDoc-0.1.8-1F8F7A?style=flat-square&labelColor=0E2A31)
+![Desktop](https://img.shields.io/badge/desktop-macOS%20·%20Windows%20·%20Linux-0E2A31?style=flat-square&labelColor=1F8F7A)
+![Knowsy](https://img.shields.io/badge/Knowsy-47%20modules-1F8F7A?style=flat-square&labelColor=0E2A31)
+![Live](https://img.shields.io/badge/live-idoc.page-0E2A31?style=flat-square&labelColor=1F8F7A)
 
 </div>
 
 ---
 
-> [!NOTE]
-> **How to read this page.** It's written to render on GitHub: the diagrams are
-> live, and the ▸ triangles are **clickable** — expand the sections that matter to
-> you. Skim the diagrams first, then open what you're curious about.
+A course is written in four or five programs that do not speak to each other. The
+notes are in Word, the equations are in LaTeX, the quiz is in Canvas, the code
+demo is a screenshot, and the exam is a PDF somebody re-types into a gradebook at
+midnight. Each tool is fine. The seams between them are where the evenings go.
+
+prosAIdon builds the two halves of a replacement: a document format that carries
+its own assessment, and a library of interactive modules that a document can put
+a student inside.
+
+<br>
 
 <div align="center">
-
-**[Mission](#-the-mission) · [Why](#-why-we-exist) · [Leadership](#-leadership--faculty) · [Pipeline](#-the-three-gate-pipeline) · [Repositories](#-the-repositories) · [The Projects](#-the-projects) · [Module Atlas](#-the-module-atlas) · [Class Platform](#-the-class-platform) · [IDoc](#-idoc--one-source-every-format) · [Contributing](#-how-a-contribution-travels) · [Design](#-the-design-language--editorial-academia)**
-
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/idoc-editor.jpg" alt="The IDoc editor: source on the left, live preview on the right with typeset maths, graded questions and a chart" width="880">
+<br>
+<sub>Source on the left, the live document on the right. The same file prints to PDF and grades itself.</sub>
 </div>
 
 ---
 
-## ◆ The Mission
+## IDoc
 
-**Knowsy is an interactive textbook for the topics that are hard to learn from a
-static page** — the ones that only click when you can *poke at them*. Instead of
-reading about how a pipeline stalls, you watch hazards ripple through one. Instead
-of memorizing a truth table, you minimize a Karnaugh map and see the gates fall
-away. Instead of trusting that an assembler "just works," you step a program
-through registers and memory, instruction by instruction.
+A single `@` introducer, one source file, and the output is a web page, a PDF, a
+printable exam or a slide deck. What LaTeX and Markdown cannot do is the second
+half: the questions are part of the document, and they mark themselves.
 
-Every piece is a small, self-contained **learning object** — a *widget* you can
-open, manipulate, and learn from — and a full class platform wraps them into real
-courses a professor can assign and grade. It spans the hardest-to-visualize corners
-of computer science and electrical engineering: assembly execution, gate-level
-logic, GPU parallelism, data structures, RF, graphics, and more.
+```idoc
+@qc(10)
+Using only NAND gates, how many are needed to build a 2-input XOR? @q(fn: 4)
 
----
-
-## ◆ Why We Exist
-
-Knowsy is a teaching tool **and** a research instrument. Three goals drive
-everything:
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### ① Test the limits of AI-assisted programming
-
-We create many modules at high speed and watch *where AI accelerates the work
-dramatically and where it doesn't*. It's a live testbed for hard questions: how
-much does the prompter's experience matter? Do different domains benefit
-differently? Can good process let a novice match an expert? And what happens to
-what's *buildable* when the cost of software falls this far?
-
-</td>
-<td width="33%" valign="top">
-
-### ② Rapid app development for professors
-
-Give faculty a way to **collectively build a large library of visual,
-interactive teaching objects** for their specific courses — and to do it in days,
-not semesters. One shared toolkit, one shared design language, many hands.
-
-</td>
-<td width="33%" valign="top">
-
-### ③ Teach undergraduates to build with AI
-
-Give students **real, achievable tasks** on a real project — plus the strategies
-to debug, the discipline to ship, and a concrete portfolio piece. A widget that's
-hard for a sophomore to read is considered a *bug*.
-
-</td>
-</tr>
-</table>
-
----
-
-## ◆ Leadership & Faculty
-
-**Lead developers — Satrajit Ghosh & Prof. Dov Kruger.** They own the
-architecture and the engineering: the shared toolkit, the application, the design
-system, the build pipeline, and the review at every gate. The core of Knowsy is
-their code.
-
-| Role | People | What they do |
-|---|---|---|
-| **Lead developers** | **Satrajit Ghosh** · **Prof. Dov Kruger** | Architect and engineer the platform end-to-end; write the core; own all three review gates. |
-| **Curriculum faculty** | Dov Kruger · Maria Striki · Yulia Kumar | Define the subject matter and the learning objectives each module must hit. |
-| **Contributors** | Rutgers student teams · AI coding agents | Build individual widgets on top of the core, under review. |
-
-**Faculty domains:** Dov Kruger — Digital Logic Design, Computer Architecture,
-assembler programming, parallel & distributed computing, algorithms, graphics ·
-Maria Striki — Computer Architecture · Yulia Kumar — Quantum computing, Machine
-Learning.
-
-```mermaid
-%%{init: {'theme':'base','themeVariables':{'lineColor':'#C8102E','fontFamily':'Georgia, serif','fontSize':'14px'}}}%%
-flowchart LR
-    K(("Knowsy"))
-    K --> CA["Computer<br/>Architecture"]
-    K --> DLD["Digital Logic<br/>Design"]
-    K --> PAR["Parallel &<br/>Distributed"]
-    K --> FND["Foundations"]
-    K --> BEY["Beyond"]
-
-    CA --> CA1["Assemblers · x86 · ARM64 · RISC-V · LC-3"]
-    CA --> CA2["Pipelining & hazards"]
-    CA --> CA3["Branch prediction · cheatsheets"]
-
-    DLD --> D1["Boolean algebra & K-maps"]
-    DLD --> D2["Error-correcting codes"]
-    DLD --> D3["Circuit & breadboard sim"]
-    DLD --> D4["State machines · Verilog"]
-
-    PAR --> P1["CUDA & warps"]
-    PAR --> P2["Host - device transfer"]
-    PAR --> P3["Concurrency visualisation"]
-
-    FND --> F1["Bits, numbers & encodings"]
-    FND --> F2["Data structures"]
-    FND --> F3["C++ execution & optimization"]
-
-    BEY --> B1["RF · antennas · Smith chart"]
-    BEY --> B2["Graphics · GLSL shaders"]
-    BEY --> B3["Quantum · ML · chemistry · geography"]
-
-    classDef root fill:#8E0A20,stroke:#F2EDE2,stroke-width:2px,color:#F2EDE2;
-    classDef subj fill:#C8102E,stroke:#0E1330,stroke-width:1px,color:#F2EDE2;
-    classDef leaf fill:#0E1330,stroke:#C8102E,stroke-width:1px,color:#F2EDE2;
-    class K root;
-    class CA,DLD,PAR,FND,BEY subj;
-    class CA1,CA2,CA3,D1,D2,D3,D4,P1,P2,P3,F1,F2,F3,B1,B2,B3 leaf;
+@graph(type=line, x=fanout, y=delay, title="Propagation delay vs fan-out", trend)
+@data
+fanout,delay
+1,2.1
+4,7.2
+6,12.1
+@end
 ```
 
----
+That is the whole document. It renders, it prints, and question 1 is worth ten
+points whether the student answers it in a browser or on paper with a pencil.
 
-## ◆ The Three-Gate Pipeline
+**252 directives. 52 question kinds. 49 widgets. 43 chart types. 10 paper venues.**
 
-Knowsy's code moves through **three repositories, each guarding a different kind of
-review.** Code is born in the open, hardened in private, and only then released.
+Maths is written without backslashes (`frac`, `alpha`, `leq`) and typesets
+through KaTeX on screen and Typst in the PDF. Beyond prose and questions there
+are real instruments: a breadboard with a simulated ATmega328P that compiles your
+sketch, a KiCad-class schematic editor running ngspice, a PCB studio, a CAD
+kernel, a spreadsheet with about sixty functions that charts read from live, 3-D
+terrain and maps, and slide decks with a presenter view.
 
-```mermaid
-%%{init: {'theme':'base','themeVariables':{'lineColor':'#C8102E','fontFamily':'Georgia, serif','fontSize':'15px'}}}%%
-flowchart TB
-    A["Knowsy-Templates<br/>— public · frontend-only · secret-free —<br/>scaffolds · toolkit · design system"]
-    B["Knowsy<br/>— private · the full app —<br/>backend · auth · data · deploy"]
-    C["Knowsy-Prod<br/>— private · the live runtime —<br/>the only thing served to students"]
+Paper exams get a barcode and registration marks, so a stack of scanned sheets
+comes back aligned, cropped per answer, marked, and queued for review.
 
-    A ==>|"Review 1 · code  →  sync downstream"| B
-    B ==>|"Review 2 · integration  →  Review 3 · UI/UX"| C
-
-    classDef gate fill:#0E1330,stroke:#C8102E,stroke-width:2px,color:#F2EDE2;
-    class A,B,C gate;
-```
-
-| Gate | Repo | What happens here |
-|:--:|---|---|
-| **1** | **Knowsy-Templates** *(public)* | The contribution surface. Contributors fork it, build a widget from a scaffold, and open a PR; the lead developers review for **code quality**. Holds zero secrets by design. |
-| **2** | **Knowsy** *(private)* | The complete application. Frontend mirrors in from Templates; backend, authentication, data, and deploy live only here. Reviewed for **integration**. |
-| **3** | **Knowsy-Prod** *(private)* | The released runtime — the only deploy target. Reviewed for **UI/UX** before anything reaches a student. |
-
-> *The split is the point: the public repo can stay safe to open to the world because
-> nothing sensitive ever lives in it. Everything risky lives downstream.*
-
----
-
-## ◆ The Repositories
+A course is a file and a folder. `ECE231.course` is text you can read, diff and
+hand to a colleague; `ECE231.lms/` holds the roster, grades, submissions and an
+append-only event log, also text. A semester zips up and unzips on someone else's
+laptop.
 
 <div align="center">
 
-| Repository | Visibility | Role |
-|---|:--:|---|
-| **Knowsy-Templates** | 🟢 public | Widget scaffolds, the shared frontend toolkit, the design system, and the guidance that contributors (human and AI) build against. Gate 1. |
-| **Knowsy** | private | The full integration app — frontend + backend + auth + class platform. Gate 2. |
-| **Knowsy-Prod** | private | The production runtime. Gate 3. |
-| **Knowsy-Bots** | private | Workflow automation for the contributor experience (onboarding, scheduling). |
-| **Idoc_codebase** | private | **IDoc** — a single-source document format for authoring articles *and* embedded interactive assessments. |
+**[Try it at idoc.page](https://idoc.page)** &nbsp;·&nbsp; **[Download the app](https://github.com/RU-EducationalPlatform/idoc-desktop/releases/latest)**
 
 </div>
 
----
+### The desktop app
 
-## ◆ The Projects
+The same editor, installed, with the documents on your own disk. macOS on Apple
+silicon and Intel, Windows, and Linux as an AppImage. Python, C and C++, Arduino
+builds, speech and offline narration arrive as add-on packs you install from
+inside the app, so the download stays under 400 MB instead of three gigabytes.
 
-Knowsy isn't a single app — it's a growing library of **interactive learning
-objects**, each a self-contained tool a student opens, manipulates, and learns from
-in the browser. Here's what's actually being built, by pillar.
+| | |
+|---|---|
+| **Latest** | [0.1.8](https://github.com/RU-EducationalPlatform/idoc-desktop/releases/latest) |
+| **Platforms** | macOS (arm64, x64), Windows x64, Linux x86_64 |
+| **Repository** | [idoc-desktop](https://github.com/RU-EducationalPlatform/idoc-desktop) |
 
-### ▸ Computer Architecture & Assembly
-
-The flagship work. A family of **assembler simulators** — *x86, ARM64 (AArch64),
-RISC-V, and LC-3* — that let a student type real assembly, run it, and
-**single-step through execution**, watching registers, flags, memory, and the stack
-change instruction by instruction. Breakpoints, ready-made example programs, and a
-shared simulator chrome make all four instruction sets feel like one tool. Around
-them: an **interactive pipeline visualizer** (instructions advancing through the
-stages, where data and control **hazards** stall things, how forwarding and branch
-strategies resolve them), a **branch-prediction explorer**, and concise *x86 /
-RISC-V cheatsheets*.
-
-### ▸ Digital Logic Design
-
-Tools that make the gate level tangible: a **bits & numbers interpreter** that shows
-one bit pattern at once as unsigned, two's-complement, float, and character; a
-**Boolean-algebra & Karnaugh-map** workbench that turns a truth table into a
-minimized circuit and shows the gates fall away; an **error-correcting-code lab**
-(parity, CRC, custom encodings — corrupt a message and watch it get caught and
-fixed); a **circuit simulator** and a **breadboard simulator** for wiring and
-testing logic by hand; plus **state-machine** and **Verilog** material.
-
-### ▸ Parallel & Distributed Computing
-
-Visualizations for the things that are notoriously hard to picture: **CUDA warps**
-and thread structure, **host↔device memory transfer** and VRAM, and
-**concurrency** — making visible what actually happens when work runs in parallel.
-
-### ▸ Foundations & Programming
-
-A **C++ execution & optimization visualizer** that shows how source becomes
-behavior (and what the optimizer does to it), **data-structure animations** —
-balanced trees, ropes, and friends restructuring themselves live — and the bit and
-number foundations everything else builds on.
-
-### ▸ Specialized & Emerging
-
-Breadth across the curriculum: **RF** tools (antenna radiation patterns, the Smith
-chart), a **GLSL shader playground**, **map projections**, a **periodic table**,
-**semiconductor structure**, **2D static equilibrium**, and **color-vision
-screening**. **Quantum computing** and **Machine Learning** modules are on the
-roadmap.
-
-> *Every object runs entirely in the browser, mounts on its own page, and ships
-> with a short instructions + help companion so a student is never staring at a
-> blank canvas. New objects stay hidden until a lead reviewer deliberately promotes
-> them to production.*
+Installers are unsigned, so macOS and Windows will warn you on first open.
 
 ---
 
-## ◆ The Module Atlas
+## Knowsy
 
-Every learning object, by stage. Modules ride the same three-gate pipeline as the
-code: built **in development**, promoted to **staged** for alpha/beta testing, then
-**deployed** to production once they're ready for students.
+Forty-seven interactive modules for the things that do not survive a static page.
+You do not read about how a pipeline stalls; you watch hazards move through one.
+You do not memorise a truth table; you drop minterms on a Karnaugh map and watch
+it group itself.
+
+Assembly simulators for x86, AArch64, RISC-V and LC-3, each with real registers,
+flags and a memory inspector. Bits as numbers and bits as characters. Boolean
+algebra, K-maps, integer overflow, floating point, Hamming codes and CRC. A
+Verilog simulator with a waveform viewer. A Smith chart you drag a load around.
+Antenna radiation patterns in 2-D polar and a 3-D dome. A shader playground with
+GPU printf. Solar system flight, celestial navigation, map projections.
+
+They run at **[knowsy.duckdns.org](https://knowsy.duckdns.org)**, and a professor
+can open one on a projector without signing in to anything.
+
+### How the two fit together
+
+A Knowsy module can be embedded in an IDoc paper as coursework. The module runs
+in an iframe, the document sets the task, and the module reports **what the
+student did, never what they scored**. A module that could post `score: 1` is a
+module a student can post `score: 1` from, with the browser console open, and
+every mark underneath it becomes decoration. The score is worked out on the
+server, next to the roster and the audit chain.
+
+Ten modules are wired this way for a digital logic course: bit interpretation,
+bits as characters, bit operations, boolean algebra, Karnaugh maps, RISC-V, x86,
+Verilog, the solar system and the shader playground.
+
+---
+
+## Where it runs
+
+`idoc.page` is one hostname over two independent stacks, each with its own
+database, routed by a cookie. Behind them sit an isolated container for running
+student code, a separate host for education records, and an integration box that
+every change passes through first.
 
 <div align="center">
-
-![Deployed](https://img.shields.io/badge/deployed-3-C8102E?style=for-the-badge&labelColor=0E1330)
-![Staged](https://img.shields.io/badge/staged-16-0E1330?style=for-the-badge&labelColor=C8102E)
-![In development](https://img.shields.io/badge/in_development-19-4A4F6E?style=for-the-badge&labelColor=0E1330)
-![Subjects](https://img.shields.io/badge/subjects-19-0E1330?style=for-the-badge&labelColor=DED4BE)
-
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/architecture.svg" alt="Production architecture: five trust zones from the public internet through the nginx edge and application tier to isolated code execution and a restricted education-records database" width="720">
 </div>
 
-### ● Deployed — live in production
-
-| Module | Subject | What it does |
-|---|---|---|
-| **Solar System** | Astronomy | Fly between the planets in a live 3D scene with editorial info cards. |
-| **Periodic Table** | Chemistry | All 118 elements — colour by property, animated electron shells, full dossiers. |
-| **Color-vision screening** | Tests | Ishihara-style plate test; runs as the onboarding calibration gate. |
-
-### ◐ Staged — alpha / beta testing
-
-| Module | Subject | What it does |
-|---|---|---|
-| **Bits as Numbers** | Bits & gates | Read one bit pattern as binary, hex, and decimal at once. |
-| **Bits as Characters** | Bits & gates | Watch a letter become bits across ASCII / UTF-8 / UTF-16 / UTF-32. |
-| **Boolean algebra** | Bits & gates | Watch an expression collapse step-by-step under the laws. |
-| **Karnaugh map** | Bits & gates | Drop minterms, watch the map group itself, read off the minimal form. |
-| **Integer overflow** | Bits & gates | Number wheel, ripple-carry ladder, real disasters, wrap / saturate / trap. |
-| **Floating point** | Bits & gates | Bit anatomy, the 0.1 lie, a log number line, broken associativity. |
-| **Differential equations** | Mathematics | Type an ODE in LaTeX; get classification, steps, and a closed form. |
-| **Parallel / SIMD Explorer** | Programming | Lane parallelism, cache lines, bitonic, FFT, Amdahl and the roofline. |
-| **CMOS MOSFET gates** | Electronics | NOT / NAND / NOR / tristate — truth table, CMOS, and switch diagrams. |
-| **2D Static Equilibrium** | Mechanics | Drop supports and loads on a beam; solve reactions, SFD, BMD. |
-| **Structural systems** | Architecture | Force paths, material comparison, and a timeline of structural systems. |
-| **Networking systems** | Networking | Topology and packets, spectrum coexistence, OSI, throughput vs range. |
-| **Health systems** | Health | Evidence-first guide to nutrition, sleep, exercise, and source quality. |
-| **Verb conjugation** | Languages | Conjugate any verb across nine languages — hover to hear, type to practice. |
-| **World map projections** | Geography | Six switchable projections, click-to-identify, pinpoint challenges. |
-| **Derivative calculator** | Tools | Differentiate symbolically with worked, step-by-step output. |
-
-### ○ In development — in Knowsy, not yet promoted
-
-| Module | Subject | What it does |
-|---|---|---|
-| **x86 Simulator** | Assembler | 16 GPRs, 16 YMM AVX2 lanes, System V calling, push / pop, memory inspector. |
-| **RISC-V Simulator** | Assembler | 32 regs, x0 hard-zero, branches, jal / ret, ZNVC, memory inspector. |
-| **AArch64 Simulator** | Assembler | 31 integer regs, 32 NEON vectors, AAPCS calling, live NZCV + call stack. |
-| **LC-3 Simulator** | Assembler | Patt & Patel LC-3 — 16-bit words, NZP flags, decoded word at PC, hex memory. |
-| **Error coding lab** | Bits & gates | Parity, Hamming(7,4), CRC — Venn SEC, step-through division, live verdict. |
-| **C++ Execution & Optimization** | Programming | Execution model, RAII, folding, inlining, vectorization with live IR diff. |
-| **Schematic Editor** | Electronics | ~30 parts, wire-draw, SVG + SPICE export, DC operating-point solver. |
-| **Verilog Simulator** | Electronics | Editor, waveform viewer, resource estimates, FPGA targets, worked examples. |
-| **Antenna radiation pattern** | RF | 10 archetypes, 2D polar + 3D dome, HPBW, directivity, sidelobes. |
-| **Smith chart** | RF | Drag-on-chart load, S11 sweep, animated L-network match, full telemetry. |
-| **Siege Engine Lab** | Mechanics | 10 siege weapons, 2D + 3D ballistics with drag, six scenarios. |
-| **Semiconductor structure** | Materials | 7 materials, 3D lattice, band diagram, animated p-n junction, LED spectrum. |
-| **Shader playground** | Graphics | Live GLSL bench with GPU printf, pixel time-travel, and reference diff. |
-| **Probability Explorer** | Mathematics | Stream samples, watch histograms emerge, overlay theory; CLT / LLN demos. |
-| **Linear Algebra Explorer** | Mathematics | Animate x↦Ax, elimination, LU / QR, eigen / SVD, least squares, PCA. |
-| **Git / GitHub visualizer** | Tools | Two-computer clone / commit / push / pull / merge sim; load any public repo. |
-| **Graphical Reference** | Reference | Process memory layout, stack frames, TCP handshake, CPU pipeline. |
-| **Learning Data Structures** | Reference | Interactive textbook — arrays, lists, hash tables, BSTs, sorting. |
-| **Command Reference** | Reference | Run real Unix commands in a sandbox with per-flag explanation. |
-
-> *An animated, filterable version of this atlas exists as a standalone page
-> (`knowsy-modules.html`) — open it in a browser for the interactive view. It can't
-> live inside this README because GitHub strips the scripts and styles that make it
-> move.*
+In production today with **350 users in Rutgers ECE, for ECE231 Digital Logic
+Design**. A real course, with real homework, real exams and real grades, which is
+the only test that has ever told us anything.
 
 ---
 
-## ◆ The Class Platform
+## The repositories
 
-A full class-management layer wraps the catalog so the learning objects become
-**courses, not just demos**. A professor creates or **adopts a section** from a
-pre-seeded catalog of ECE/CS courses, attaches the modules they want, and invites
-students with a short join code. Each class then gets:
-
-- **Assignments** — authored against the class's own modules, with due dates,
-  rubrics, **live score preview** for students, **autograding** where it makes
-  sense, optional **peer review**, and a teacher grading view.
-- **A teaching dashboard** — a magazine-style overview of who submitted what,
-  across every class a professor runs.
-- **A shared calendar** — every member authors their own events: public or private,
-  one-off or recurring, some **bookable** (office hours), with optional two-way sync
-  to an external calendar.
-- **Announcements & chat** — a posting board with pinnable banners and a live
-  per-class conversation.
-- **Live broadcast** — a cost-controlled, screen-only lecture stream for the
-  big-hall, poor-sightlines case.
-
-Roles are enforced end-to-end: students never see the authoring or grading
-surfaces. Sign-in covers Google, Apple, Rutgers SSO, and email/password, and the
-whole thing can be demoed locally with seeded users — no cloud account required.
+| Repository | What it is |
+|---|---|
+| **[idoc-desktop](https://github.com/RU-EducationalPlatform/idoc-desktop)** | The installed app. Public: downloads, add-on packs, the update feed. |
+| **IDoc** | The platform. Engine, editor shell, accounts, the LMS, the deployment. Private. |
+| **Knowsy** | The interactive modules and the class platform. Private. |
+| **blockloaders** | Block formats and WASM tools behind the maps, terrain and 3-D. Private. |
 
 ---
-
-## ◆ IDoc — One Source, Every Format
-
-**IDoc** is an in-house document format designed to cover the
-LaTeX / Markdown / PDF / Word ground with a single, consistent syntax — and, more
-importantly, to let an author write a *lesson and its assessment from one source*.
-
-<details>
-<summary><b>▸ What IDoc is for</b></summary>
-
-<br>
-
-Write an article and the quizzes, fill-ins, code questions, and interactive
-visualizations that go with it, all in one file — then render it anywhere. The
-vision spans a browser render engine (interactive question widgets that drop into
-any page or LMS), a professor-facing authoring tool with live preview, editor
-highlighting across the popular code editors, and an experimental native
-high-performance rendering path. It's the connective tissue between *writing*
-course material and *running* it inside Knowsy.
-
-> Status: a maturing format with a formal grammar, a spec, sample documents, and
-> the beginnings of a toolchain. It was spun out of the Knowsy project into its own
-> home so it can grow independently.
-
-</details>
-
----
-
-## ◆ How a Contribution Travels
-
-The lead developers build and own the **core** — the toolkit, the application, the
-pipeline. On top of that, **Rutgers student teams** contribute individual widgets,
-with AI assistants as collaborators and every change passing through the leads'
-review. The journey from "new face" to "shipped feature" is deliberately smooth:
-
-```mermaid
-%%{init: {'theme':'base','themeVariables':{'lineColor':'#C8102E','fontFamily':'Georgia, serif','fontSize':'14px'}}}%%
-flowchart LR
-    J["Join the<br/>community"] --> O["Guided<br/>onboarding"]
-    O --> T["Claim a task<br/>(team milestone)"]
-    T --> B["Build a widget<br/>from a scaffold"]
-    B --> P["Open a PR<br/>· Review 1"]
-    P --> S["Integrate<br/>· release"]
-    classDef step fill:#0E1330,stroke:#C8102E,stroke-width:1.5px,color:#F2EDE2;
-    class J,O,T,B,P,S step;
-```
-
-<details>
-<summary><b>▸ The teams</b></summary>
-
-<br>
-
-Contributors are organized into small, named teams (after the Greek pantheon —
-*hera, iris, poseidon, zeus, demeter, athena, artemis, hephaestus, ares, apollo,
-hermes, dionysus, hades, …*). Each team owns a task, expressed as a milestone, and
-each person sits on exactly one team. The roster, the tasks, and the teams stay in
-lockstep across the tools the project runs on.
-
-</details>
-
-
 
 <div align="center">
+<sub>
 
-<br>
+**prosAIdon** &nbsp;·&nbsp; Dov Kruger &nbsp;·&nbsp; Satrajit Ghosh
 
-### ◆
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/prosaidon-mark.svg" alt="" width="26">
 
-**Knowsy** — *Rutgers University · RU-EducationalPlatform*
-
-Architected & engineered by **Satrajit Ghosh** and **Prof. Dov Kruger**.
-Widgets contributed by Rutgers student teams. AI as a force multiplier.
-
-<sub>Knowsy-Templates is open-source under the MIT License. The integration,
-production, automation, and IDoc repositories are private.</sub>
-
-<br>
-
-*“Developed by engineers,Accelerated by AI.”*
-
+</sub>
 </div>
