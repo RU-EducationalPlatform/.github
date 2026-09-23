@@ -133,6 +133,23 @@ can open one on a projector without signing in to anything.
 </div>
 
 
+
+<br>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/knowsy-solar.jpg" alt="The solar system module: the Sun and all eight planets on their orbits against a starfield, with speed controls and an n-body toggle" width="880">
+<br>
+<sub>Every planet on its real orbit, at a date you choose, with an n-body mode and a fly camera</sub>
+</div>
+
+<br>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/knowsy-trebuchet.jpg" alt="The siege engine lab: launch speed, angle, range, peak height and impact energy across the top, above a side-on battlefield with hills and trees" width="880">
+<br>
+<sub>Tune a counterweight trebuchet and watch range, peak height and impact energy answer back</sub>
+</div>
+
 ### How the two fit together
 
 A Knowsy module can be embedded in an IDoc paper as coursework. The module runs
@@ -208,9 +225,21 @@ is what makes a wiring lab something a server can mark.
 <sub><code>@EECad(schematic)</code> · six lines become a circuit that ngspice will actually simulate, and it exports a netlist, a SPICE deck and a BOM</sub>
 </div>
 
-There is more in the same shape: a PCB studio, CAD on an OpenCascade kernel, a
-Blender-style mesh editor, a vector drawing studio, a spreadsheet with about
-sixty functions, and sandboxes for logic, automata, chemistry and physics.
+
+<br>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/idoc-octave.jpg" alt="An Octave block in the document: the source on the left, a rendered square wave built from twelve harmonics on the right, with a Run button" width="880">
+<br>
+<sub><code>@octave</code> · a square wave built from twelve harmonics, animating as the sum extends, with Gibbs overshoot refusing to shrink</sub>
+</div>
+
+There is more in the same shape. **OpenSCAD and a BREP kernel** for solid models
+you can export as STEP, a **Blender-style mesh editor**, a **vector drawing
+studio**, a **graphing calculator** and an **RPN one**, a **coding notebook**
+that runs Python in the page, a **spreadsheet** with about sixty functions that
+charts read from live, and sandboxes for **logic, automata, chemistry, physics
+and music**.
 
 ---
 
