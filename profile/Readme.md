@@ -118,6 +118,21 @@ GPU printf. Solar system flight, celestial navigation, map projections.
 They run at **[knowsy.duckdns.org](https://knowsy.duckdns.org)**, and a professor
 can open one on a projector without signing in to anything.
 
+<div align="center">
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/knowsy-kmap.jpg" alt="The Karnaugh map module: a truth table on the left, a K-map with two groupings circled, the minimal expression, timing hazards and prime implicants" width="880">
+<br>
+<sub>Drop minterms and the map groups itself, then reads off the minimal form, the hazards and the prime implicants</sub>
+</div>
+
+<br>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/knowsy-smith.jpg" alt="The Smith chart lab: reflection coefficient, VSWR and return loss across the top, and a Smith chart with a draggable load point" width="880">
+<br>
+<sub>Drag the load around the chart and watch VSWR, return loss and mismatch loss move with it</sub>
+</div>
+
+
 ### How the two fit together
 
 A Knowsy module can be embedded in an IDoc paper as coursework. The module runs
@@ -133,20 +148,69 @@ Verilog, the solar system and the shader playground.
 
 ---
 
-## Where it runs
+## What one file gives you
 
-`idoc.page` is one hostname over two independent stacks, each with its own
-database, routed by a cookie. Behind them sit an isolated container for running
-student code, a separate host for education records, and an integration box that
-every change passes through first.
+The same source renders on screen, typesets to PDF with selectable maths, lays
+itself out as a printable exam with a barcode, and presents as a slide deck. The
+questions come along for the ride in every one of those.
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/architecture.svg" alt="Production architecture: five trust zones from the public internet through the nginx edge and application tier to isolated code execution and a restricted education-records database" width="720">
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/idoc-chart.png" alt="A live stacked bar chart in the document, with the exact IDoc source that drew it shown underneath" width="760">
+<br>
+<sub>Forty-three chart types. Every one of them is four lines and its own data.</sub>
 </div>
 
-In production today with **350 users in Rutgers ECE, for ECE231 Digital Logic
-Design**. A real course, with real homework, real exams and real grades, which is
-the only test that has ever told us anything.
+<table>
+<tr><td width="33%" valign="top">
+
+**Write**
+
+Prose, sections, tables, figures, citations and ten paper venues from IEEE to a
+thesis. Maths without a single backslash.
+
+</td><td width="33%" valign="top">
+
+**Compute**
+
+Python and JavaScript in the page, C, C++, Java, Go and Rust in a sealed
+container. Spreadsheets, charts, 3-D terrain, maps and a breadboard that really
+simulates.
+
+</td><td width="33%" valign="top">
+
+**Grade**
+
+52 question kinds that mark themselves, on screen or on paper. Rubrics, partial
+credit, randomised variants, and a gradebook that prints its own arithmetic.
+
+</td></tr>
+</table>
+
+---
+
+## The studios
+
+A document can hold a real instrument, and the instrument is text. Drag a part on
+the canvas and the source changes; edit the source and the canvas changes. That
+is what makes a wiring lab something a server can mark.
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/idoc-breadboard.jpg" alt="The breadboard studio: a text DSL on the left places an Arduino, an LED and a resistor; the live canvas on the right shows the assembled board with a parts palette" width="880">
+<br>
+<sub><code>@EECad(sourdough)</code> · the analog side is a real MNA solver, the digital side a simulated ATmega328P, and your sketch is compiled by avr-gcc before it runs</sub>
+</div>
+
+<br>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/idoc-schematic.jpg" alt="The schematic studio: six lines of DSL on the left, a drawn resistor divider on the right, with Simulate, Netlist, SPICE, BOM and Check buttons" width="880">
+<br>
+<sub><code>@EECad(schematic)</code> · six lines become a circuit that ngspice will actually simulate, and it exports a netlist, a SPICE deck and a BOM</sub>
+</div>
+
+There is more in the same shape: a PCB studio, CAD on an OpenCascade kernel, a
+Blender-style mesh editor, a vector drawing studio, a spreadsheet with about
+sixty functions, and sandboxes for logic, automata, chemistry and physics.
 
 ---
 
