@@ -12,6 +12,7 @@
 <br>
 
 ![Desktop](https://img.shields.io/badge/desktop-macOS%20·%20Windows%20·%20Linux-0E2A31?style=flat-square&labelColor=1F8F7A)
+![Knowsy](https://img.shields.io/badge/Knowsy-50%20modules-1F8F7A?style=flat-square&labelColor=0E2A31)
 ![Live](https://img.shields.io/badge/live-idoc.page-0E2A31?style=flat-square&labelColor=1F8F7A)
 
 </div>
