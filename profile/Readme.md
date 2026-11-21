@@ -125,11 +125,14 @@ silicon and Intel, Windows, and Linux as an AppImage. Python, C and C++, Arduino
 builds, speech and offline narration arrive as add-on packs you install from
 inside the app, so the download stays under 400 MB instead of three gigabytes.
 
-| | |
-|---|---|
-| **Latest** | [0.1.8](https://github.com/RU-EducationalPlatform/idoc-desktop/releases/latest) |
-| **Platforms** | macOS (arm64, x64), Windows x64, Linux x86_64 |
-| **Repository** | [idoc-desktop](https://github.com/RU-EducationalPlatform/idoc-desktop) |
+| | macOS | Windows | Linux |
+|---|:---:|:---:|:---:|
+| **Latest release** | ![mac](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FRU-EducationalPlatform%2Fidoc-desktop%2Fmain%2Fstats%2Fsummary.json&query=%24.latest.mac&label=mac&style=flat-square&labelColor=0E2A31&color=1F8F7A&cacheSeconds=3600) | ![win](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FRU-EducationalPlatform%2Fidoc-desktop%2Fmain%2Fstats%2Fsummary.json&query=%24.latest.win&label=win&style=flat-square&labelColor=0E2A31&color=1F8F7A&cacheSeconds=3600) | ![linux](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FRU-EducationalPlatform%2Fidoc-desktop%2Fmain%2Fstats%2Fsummary.json&query=%24.latest.linux&label=linux&style=flat-square&labelColor=0E2A31&color=1F8F7A&cacheSeconds=3600) |
+| **Every release** | ![mac](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FRU-EducationalPlatform%2Fidoc-desktop%2Fmain%2Fstats%2Fsummary.json&query=%24.total.mac&label=mac&style=flat-square&labelColor=0E2A31&color=1F8F7A&cacheSeconds=3600) | ![win](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FRU-EducationalPlatform%2Fidoc-desktop%2Fmain%2Fstats%2Fsummary.json&query=%24.total.win&label=win&style=flat-square&labelColor=0E2A31&color=1F8F7A&cacheSeconds=3600) | ![linux](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FRU-EducationalPlatform%2Fidoc-desktop%2Fmain%2Fstats%2Fsummary.json&query=%24.total.linux&label=linux&style=flat-square&labelColor=0E2A31&color=1F8F7A&cacheSeconds=3600) |
+
+[![Latest version](https://img.shields.io/github/v/release/RU-EducationalPlatform/idoc-desktop?style=flat-square&label=latest&labelColor=0E2A31&color=1F8F7A)](https://github.com/RU-EducationalPlatform/idoc-desktop/releases/latest) &nbsp; ![total downloads incl. early testers](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FRU-EducationalPlatform%2Fidoc-desktop%2Fmain%2Fstats%2Fsummary.json&query=%24.all&label=total downloads incl. early testers&style=flat-square&labelColor=0E2A31&color=1F8F7A&cacheSeconds=3600)
+
+<sub>Read live from GitHub's release counters and refreshed every week. Our own testing is filtered out, and the ten early testers are counted once as a group. A count is a download, not a person.</sub>
 
 Installers are unsigned, so macOS and Windows will warn you on first open.
 
