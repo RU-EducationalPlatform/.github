@@ -40,6 +40,39 @@ a student inside.
 
 ---
 
+## The products
+
+prosAIdon makes the software a STEM course runs on. IDoc came first. The others grow around it, and two engines underneath are shared by all of them.
+
+<table>
+<tr>
+<td width="20%" align="center" valign="top"><img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/products/idoc.png" width="72" alt="IDoc"><br><b>IDoc</b><br><sub>documents, code, exams, grading</sub></td>
+<td width="20%" align="center" valign="top"><img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/products/docent.png" width="72" alt="Docent"><br><b>Docent</b><br><sub>the learning management system</sub></td>
+<td width="20%" align="center" valign="top"><img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/products/knowsy.png" width="72" alt="Knowsy"><br><b>Knowsy</b><br><sub>simulations you can poke at</sub></td>
+<td width="20%" align="center" valign="top"><img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/products/ksat.png" width="72" alt="KSAT"><br><b>KSAT</b><br><sub>a low-power audio reader</sub></td>
+<td width="20%" align="center" valign="top"><img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/products/grail.png" width="72" alt="Grail"><br><b>Grail</b><br><sub>an interface that adapts to the reader</sub></td>
+</tr>
+</table>
+
+**IDoc** is a document you program. One plain-text file becomes the web page students read, the slides for lecture, the PDF they print and a randomized paper exam that scans back in. It can also be read aloud. Code runs in the browser with nothing to install, and polling happens inside the same document during class. Handwriting on scanned exams is read against the generated answer key, and the instructor reviews every grade before it posts.
+
+**Docent** is the course system. It holds rosters, assignments and grades, hands out exercises live during class, and runs quizzes. Handwritten exams are graded by AI that runs on our own machines, so student records stay inside the FERPA boundary. Grades can be sent back to Canvas. It is being piloted in a Rutgers ECE course this semester.
+
+**Knowsy** is a library of simulations and virtual manipulables that you can put inside an IDoc: a Karnaugh map that groups itself, a Smith chart you drag a load around, a pipeline you watch stall. They use simplified versions of real tools, and they work the same on every platform.
+
+**KSAT** reads any IDoc aloud in a trained voice, equations included. It is built for blind and low-vision readers and for anyone who would rather listen while they do something else, and it is designed to use very little power.
+
+**Grail** is an interface layer for people who find ordinary software hard to use. It is built first for low-vision readers, and for older users who are tired of the layout changing under them. It also adapts to the reader's language.
+
+### Underneath all of them
+
+| | |
+|---|---|
+| **Trident** | Our AI engine, a C++ reimplementation of OLMo-core, so models run on a university's own hardware and not someone else's cloud. |
+| **Blockloader** | A compact binary file format. It loads much faster than a PDF and carries no executable payload, which is why it is safe to open. |
+
+---
+
 ## IDoc
 
 A single `@` introducer, one source file, and the output is a web page, a PDF, a
