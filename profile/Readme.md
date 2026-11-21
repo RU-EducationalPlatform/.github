@@ -13,7 +13,7 @@
 
 [![IDoc](https://img.shields.io/github/v/release/RU-EducationalPlatform/idoc-desktop?style=flat-square&label=IDoc&labelColor=0E2A31&color=1F8F7A)](https://github.com/RU-EducationalPlatform/idoc-desktop/releases/latest)
 ![Desktop](https://img.shields.io/badge/desktop-macOS%20·%20Windows%20·%20Linux-0E2A31?style=flat-square&labelColor=1F8F7A)
-![Knowsy](https://img.shields.io/badge/Knowsy-50%20modules-1F8F7A?style=flat-square&labelColor=0E2A31)
+![Knowsy](https://img.shields.io/badge/Knowsy-20%20modules-1F8F7A?style=flat-square&labelColor=0E2A31)
 ![Live](https://img.shields.io/badge/live-idoc.page-0E2A31?style=flat-square&labelColor=1F8F7A)
 [![Downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FRU-EducationalPlatform%2Fidoc-desktop%2Fmain%2Fstats%2Fdownloads.json&cb=3&style=flat-square&labelColor=1F8F7A&color=0E2A31)](https://github.com/RU-EducationalPlatform/idoc-desktop#downloads)
 
@@ -58,7 +58,7 @@ prosAIdon makes the software a STEM course runs on. IDoc came first. The others 
 
 **Docent** is the course system. It holds rosters, assignments and grades, hands out exercises live during class, and runs quizzes. Handwritten exams are graded by AI that runs on our own machines, so student records stay inside the FERPA boundary. Grades can be sent back to Canvas. It is being piloted in a Rutgers ECE course this semester.
 
-**Knowsy** is a library of simulations and virtual manipulables that you can put inside an IDoc: a Karnaugh map that groups itself, a Smith chart you drag a load around, a pipeline you watch stall. They use simplified versions of real tools, and they work the same on every platform.
+**Knowsy** is a library of simulations and virtual manipulables that you can put inside an IDoc: a Karnaugh map that groups itself, a CMOS gate you watch conduct, a solar system you fly through. They use simplified versions of real tools, and they work the same on every platform.
 
 **KSAT** reads any IDoc aloud in a trained voice, equations included. It is built for blind and low-vision readers and for anyone who would rather listen while they do something else, and it is designed to use very little power.
 
@@ -140,17 +140,19 @@ Installers are unsigned, so macOS and Windows will warn you on first open.
 
 ## Knowsy
 
-Forty-seven interactive modules for the things that do not survive a static page.
-You do not read about how a pipeline stalls; you watch hazards move through one.
+Twenty interactive modules for the things that do not survive a static page.
 You do not memorise a truth table; you drop minterms on a Karnaugh map and watch
-it group itself.
+it group itself. You do not read about how a CMOS gate works; you flip the inputs
+and watch the current find its path.
 
-Assembly simulators for x86, AArch64, RISC-V and LC-3, each with real registers,
-flags and a memory inspector. Bits as numbers and bits as characters. Boolean
-algebra, K-maps, integer overflow, floating point, Hamming codes and CRC. A
-Verilog simulator with a waveform viewer. A Smith chart you drag a load around.
-Antenna radiation patterns in 2-D polar and a 3-D dome. A shader playground with
-GPU printf. Solar system flight, celestial navigation, map projections.
+There are assembly simulators for x86, AArch64, RISC-V and LC-3 with real
+registers and a memory inspector, plus bits as numbers, bits as characters, a
+bit-operations ALU and boolean algebra that simplifies one law at a time. An
+error-coding lab covers parity, Hamming and CRC, and a cryptography module steps
+through XOR, Enigma and AES. A Verilog simulator has a waveform viewer and FPGA
+resource estimates. The rest are MOSFET gates, semiconductor crystals, a shader
+playground with GPU printf, a solar system you can fly through, the periodic
+table, a data structures textbook, systems diagrams and a sandboxed Unix shell.
 
 They run at **[knowsy.duckdns.org](https://knowsy.duckdns.org)**, and a professor
 can open one on a projector without signing in to anything.
@@ -164,27 +166,25 @@ can open one on a projector without signing in to anything.
 <br>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/knowsy-smith.jpg" alt="The Smith chart lab: reflection coefficient, VSWR and return loss across the top, and a Smith chart with a draggable load point" width="880">
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/knowsy-mosfet.jpg" alt="The CMOS gates module: a two-input NAND drawn as transistors and as switches, with the conducting path highlighted and a truth table" width="880">
 <br>
-<sub>Drag the load around the chart and watch VSWR, return loss and mismatch loss move with it</sub>
-</div>
-
-
-
-<br>
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/knowsy-solar.jpg" alt="The solar system module: the Sun and all eight planets on their orbits against a starfield, with speed controls and an n-body toggle" width="880">
-<br>
-<sub>Every planet on its real orbit, at a date you choose, with an n-body mode and a fly camera</sub>
+<sub>Flip the inputs of a NAND and watch the conducting path switch between the pull-up and pull-down networks</sub>
 </div>
 
 <br>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/knowsy-trebuchet.jpg" alt="The siege engine lab: launch speed, angle, range, peak height and impact energy across the top, above a side-on battlefield with hills and trees" width="880">
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/knowsy-shader.jpg" alt="The shader playground: a GLSL editor beside a live plasma render, with frame rate and probe counts above" width="880">
 <br>
-<sub>Tune a counterweight trebuchet and watch range, peak height and impact energy answer back</sub>
+<sub>Write GLSL on the left and see it on the right. Probes are added for you, so you can read any value without printf by hand</sub>
+</div>
+
+<br>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/RU-EducationalPlatform/.github/main/assets/knowsy-solar.jpg" alt="The solar system module: the Sun and planets on their orbits against a starfield, with speed, orbit and trail controls" width="880">
+<br>
+<sub>Every planet on its orbit at a date you choose, with an n-body mode and a fly camera</sub>
 </div>
 
 ### How the two fit together
