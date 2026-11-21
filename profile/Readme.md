@@ -11,11 +11,10 @@
 
 <br>
 
-![IDoc](https://img.shields.io/badge/IDoc-0.1.8-1F8F7A?style=flat-square&labelColor=0E2A31)
+[![IDoc](https://img.shields.io/github/v/release/RU-EducationalPlatform/idoc-desktop?style=flat-square&label=IDoc&labelColor=0E2A31&color=1F8F7A)](https://github.com/RU-EducationalPlatform/idoc-desktop/releases/latest)
 ![Desktop](https://img.shields.io/badge/desktop-macOS%20·%20Windows%20·%20Linux-0E2A31?style=flat-square&labelColor=1F8F7A)
 ![Knowsy](https://img.shields.io/badge/Knowsy-47%20modules-1F8F7A?style=flat-square&labelColor=0E2A31)
 ![Live](https://img.shields.io/badge/live-idoc.page-0E2A31?style=flat-square&labelColor=1F8F7A)
-[![Downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FRU-EducationalPlatform%2Fidoc-desktop%2Fmain%2Fstats%2Fdownloads.json&style=flat-square&labelColor=1F8F7A&color=0E2A31)](https://github.com/RU-EducationalPlatform/idoc-desktop#downloads)
 
 </div>
 
